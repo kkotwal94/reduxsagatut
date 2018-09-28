@@ -15,8 +15,8 @@ const storeConfig = () => {
     reducer,
     compose(
       applyMiddleware(sagaMiddleware),
-      reduxDevTools,
-      applyMiddleware(logger)
+      applyMiddleware(logger),
+      reduxDevTools
     )
   );
   sagaMiddleware.run(watcherSaga);
